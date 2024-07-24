@@ -36,7 +36,7 @@
             <p>
                 <strong>Usage:</strong><br>
                 <code>cd &lt;arg&gt;</code><br>
-                <code>cd &lt;no arg&gt;</code> == <code>cd $HOME</code> (note: if $HOME is unset exit status 1)<br>
+                <code>cd &lt;no args&gt;</code> == <code>cd $HOME</code> (note: if $HOME is unset exit status 1)<br>
                 <code>cd &lt;arg1&gt; &lt;arg1&gt;</code> -> exit status 2<br>
                 <code>cd &lt;dir name over 255&gt;</code> -> exit status 1<br>
                 <code>cd &lt;non existent dir&gt;</code> -> exit status 1
@@ -78,8 +78,10 @@
         <section class="exit-status">
             <h2>export</h2>
             <p>
-                <strong>Usage:</strong><br>
-                <code>export &lt;arg1&gt; &lt;arg2&gt; ... (arg: &lt;string&gt;=&lt;string&gt;/ &lt;string&gt;+=&lt;string&gt;)</code><br> exports environment variables<br>no known exit statuses
+                <strong>Usage:</strong><br> exports environment variables<br>
+                <code>export &lt;arg1&gt; &lt;arg2&gt; ... (arg: &lt;string&gt;=&lt;string&gt;/ &lt;string&gt;+=&lt;string&gt;)</code><br>
+                <code> export &lt;no args&gt; -> shows all exported variables</code><br>
+                <code>export &lt;invalid arg&gt; -> exit status 1 (example: string does not start with _ or alphabet)</code>
             </p>
         </section>
     </div>
